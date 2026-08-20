@@ -3,8 +3,7 @@
   "routes": [
     {
       "src": "/AMP/(.*)",
-      "has": [{ "type": "host", "value": "samsnewportnews.com
-" }],
+      "has": [{ "type": "host", "value": "samsnewportnews.com" }],
       "status": 308,
       "headers": { "Location": "https://amp.samsnewportnews.com/$1" }
     },

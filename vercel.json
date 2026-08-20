@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "src": "/AMP/(.*)",
+      "has": [{ "type": "host", "value": "samsnewportnews.com
+" }],
+      "status": 308,
+      "headers": { "Location": "https://amp.samsnewportnews.com/$1" }
+    },
+    {
+      "src": "/",
+      "has": [{ "type": "host", "value": "amp.samsnewportnews.com" }],
+      "dest": "/AMP/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "has": [{ "type": "host", "value": "amp.samsnewportnews.com" }],
+      "dest": "/AMP/$1"
+    }
+  ]
+}
